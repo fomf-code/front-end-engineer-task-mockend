@@ -1,8 +1,5 @@
 {
   "Event": {
-    "isBookable": {
-      "boolean": {}
-    },
     "title": {
       "string": [
         "INFEKTIOLOGIE REFRESHER"
@@ -10,15 +7,12 @@
     },
     "city": {
       "string": [
-        "munich",
-        "berlin",
-        "vienna"
+        "munich"
       ]
     },
     "country": {
       "string": [
-        "de",
-        "au"
+        "de"
       ]
     },
     "language": {
@@ -29,17 +23,17 @@
     "startDateTime": {
       "dateTime": {
         "min": "2023-01-01T00:00:00Z",
-        "max": "2023-12-31T00:00:00Z"
+        "max": "2023-01-01T00:00:00Z"
       }
     },
     "endDateTime": {
       "dateTime": {
-        "min": "2023-01-01T00:00:00Z",
-        "max": "2023-12-31T00:00:00Z"
+        "min": "2023-01-03T00:00:00Z",
+        "max": "2023-01-03T00:00:00Z"
       }
     },
     "wholeEventPrice": {
-      "int": [350]
+      "int": [275]
     },
     "daytickets": {
       "hasMany": "Dayticket"
@@ -52,25 +46,19 @@
     "halfdaytickets": {
       "hasMany": "Halfdayticket"
     },
-    "isBookable": {
-      "boolean": {}
-    },
     "kind": {
       "string": [
         "DAY"
       ]
     },
     "day": {
-      "int": [0, 1, 2, 3]
+      "int": [0, 1, 2]
     },
     "price": {
       "int": [100]
     }
   },
   "Halfdayticket": {
-    "isBookable": {
-      "boolean": {}
-    },
     "event": {
       "belongsTo": "Dayticket"
     },
