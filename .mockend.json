@@ -1,14 +1,62 @@
 {
-  "Post": {
-    "title": { "string": {} },
-    "comments": {
-      "hasMany": "Comment"
+  "Event": {
+    "title": {
+      "string": [
+        "INFEKTIOLOGIE REFRESHER",
+        "ALLGEMEINMEDIZIN REFRESHER"
+      ]
+    },
+    "city": {
+      "string": [
+        "munich",
+        "berlin",
+        "vienna"
+      ]
+    },
+    "country": {
+      "string": [
+        "de",
+        "au"
+      ]
+    },
+    "language": {
+      "string": [
+        "german"
+      ]
+    },
+    "startDateTime": {
+      "dateTime": {
+        "min": "2023-01-01T00:00:00Z",
+        "max": "2023-12-31T00:00:00Z"
+      }
+    },
+    "endDateTime": {
+      "dateTime": {
+        "min": "2023-01-01T00:00:00Z",
+        "max": "2023-12-31T00:00:00Z"
+      }
+    },
+    "wholeEventPrice": {
+      "int": [350]
+    },
+    "daytickets": {
+      "hasMany": "Dayticket"
     }
   },
-  "Comment": {
-    "body": { "string": {} },
-    "post": {
-      "belongsTo": "Post"
+  "Dayticket": {
+    "event": {
+      "belongsTo": "Event"
+    },
+    "kind": {
+      "string": [
+        "DAY"
+      ]
+    },
+    "day": {
+      "int": [0, 1, 2, 3]
+    },
+    "price": {
+      "int": [100]
     }
   }
 }
