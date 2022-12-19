@@ -1,5 +1,8 @@
 {
   "Event": {
+    "isBookable": {
+      "boolean": {}
+    },
     "title": {
       "string": [
         "INFEKTIOLOGIE REFRESHER",
@@ -47,6 +50,12 @@
     "event": {
       "belongsTo": "Event"
     },
+    "halfdaytickets": {
+      "hasMany": "Halfdayticket"
+    },
+    "isBookable": {
+      "boolean": {}
+    },
     "kind": {
       "string": [
         "DAY"
@@ -57,12 +66,12 @@
     },
     "price": {
       "int": [100]
-    },
-    "halfdaytickets": {
-      "hasMany": "Halfdayticket"
     }
   },
   "Halfdayticket": {
+    "isBookable": {
+      "boolean": {}
+    },
     "event": {
       "belongsTo": "Dayticket"
     },
