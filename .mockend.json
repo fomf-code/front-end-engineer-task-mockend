@@ -1,0 +1,28 @@
+{
+  "Event": {
+    "title": {
+      "string": ["INFEKTIOLOGIE REFRESHER", "ALLGEMEINMEDIZIN REFRESHER"]
+    },
+    "city": {
+      "string": ["munich", "berlin", "vienna"]
+    },
+    "country": {
+      "string": ["de", "au"]
+    },
+    "language": {
+      "string": ["german"]
+    },
+    "startDateTime": {
+        "dateTime": {
+            "min": "2023-01-01T00:00:00Z",
+            "max": "2023-12-31T00:00:00Z"
+        }
+    },
+    "endDateTime": {
+        "dateTime": {
+            "min": "2023-01-01T00:00:00Z",
+            "max": "2023-12-31T00:00:00Z"
+        }
+    }
+  }
+}
