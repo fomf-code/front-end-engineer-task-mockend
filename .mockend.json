@@ -57,6 +57,25 @@
     },
     "price": {
       "int": [100]
+    },
+    "halfdaytickets": {
+      "hasMany": "Halfdayticket"
+    }
+  },
+  "Halfdayticket": {
+    "event": {
+      "belongsTo": "Dayticket"
+    },
+    "kind": {
+      "string": [
+        "HALF_DAY"
+      ]
+    },
+    "price": {
+      "int": [80]
+    },
+    "block": {
+      "string": ["BLOCK A", "BLOCK B"]
     }
   }
 }
