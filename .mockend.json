@@ -1,28 +1,81 @@
 {
+  "DayTicket": {
+    "kind": {
+      "string": [
+        "DAY"
+      ]
+    },
+    "day": {
+      "int": [0, 1, 2, 3]
+    },
+    "price": {
+      "int": [100]
+    }
+  },
+  "HalfDayTicket": {
+    "kind": {
+      "string": [
+        "HALF_DAY"
+      ]
+    },
+    "day": {
+      "int": [0, 1, 2, 3]
+    },
+    "block": {
+      "string": [
+        "A",
+        "B"
+      ]
+    },
+    "price": {
+      "int": [75]
+    }
+  },
   "Event": {
     "title": {
-      "string": ["INFEKTIOLOGIE REFRESHER", "ALLGEMEINMEDIZIN REFRESHER"]
+      "string": [
+        "INFEKTIOLOGIE REFRESHER",
+        "ALLGEMEINMEDIZIN REFRESHER"
+      ]
     },
     "city": {
-      "string": ["munich", "berlin", "vienna"]
+      "string": [
+        "munich",
+        "berlin",
+        "vienna"
+      ]
     },
     "country": {
-      "string": ["de", "au"]
+      "string": [
+        "de",
+        "au"
+      ]
     },
     "language": {
-      "string": ["german"]
+      "string": [
+        "german"
+      ]
     },
     "startDateTime": {
-        "dateTime": {
-            "min": "2023-01-01T00:00:00Z",
-            "max": "2023-12-31T00:00:00Z"
-        }
+      "dateTime": {
+        "min": "2023-01-01T00:00:00Z",
+        "max": "2023-12-31T00:00:00Z"
+      }
     },
     "endDateTime": {
-        "dateTime": {
-            "min": "2023-01-01T00:00:00Z",
-            "max": "2023-12-31T00:00:00Z"
-        }
+      "dateTime": {
+        "min": "2023-01-01T00:00:00Z",
+        "max": "2023-12-31T00:00:00Z"
+      }
+    },
+    "wholeEventPrice": {
+      "int": [350]
+    },
+    "dayTickets": {
+      "hasMany": "DayTicket"
+    },
+    "halfDayTickets": {
+      "hasMany": "HalfDayTicket"
     }
   }
 }
