@@ -12,11 +12,17 @@ const schema = buildSchema(`
     HALF_DAY_TICKET
   }
 
+  enum BlockType {
+    A
+    B
+  }
+
   type Ticket {
     tickeType: TicketType!
     date: String!
     id: String!
     price: Int!
+	block: BlockType
   }
 
   type Event {
@@ -35,10 +41,22 @@ const schema = buildSchema(`
   }
 `);
 
-// The root provides a resolver function for each API endpoint
+
 const root = {
+	/**
+	 * There are two events with the following identifiers:
+	 * - "allgemein-und-innere-medizin-refresher-berlin"
+	 * - "psychiatrie-und-psychotherapie-refresher"
+	 *
+	 * @param eventId
+	 * @returns a list of events.
+	 */
 	events: ({ eventId }: { eventId: string }): Array<FomfEvent> => {
-		return [getEvent(eventId)]
+		const event = getEvent(eventId);
+		if (!event) {
+			return [];
+		}
+		return [event];
 	}
 };
 

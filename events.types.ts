@@ -5,6 +5,7 @@ export type Ticket = {
 	date: string;
 	id: string;
 	price: number;
+	block?: 'A' | 'B';
 };
 
 export type FomfEvent = {
